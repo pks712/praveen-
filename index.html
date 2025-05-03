@@ -1,29 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel ="stylesheet" href ="sks.css">
-</head>
-<body>
-    <script src ="sks.js"></script>
-    <h1 id = "s">Age calculator</h1>
-  <h4 id ="p">Enter the your Date of birth:</h4>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillvibeePro</title>
 
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
 
-<center>
-  <input type="date" id="date" name="date">
-</center>
+    <!-- Bootstrap CSS (Downloaded version) -->
+    <link rel="stylesheet" href="bootstrap.css" />
 
-<center>
-<button id ="a"  onclick ="calculateage()"> calculate Age</button>
-</center>
-<h2><p id ="result"></p></h2>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <div class="website-icon1">
+          <div class="word1">S</div>
+          <div class="line-on-word1"></div>
+        </div>
+        <a class="navbar-brand" href="#"> Skillvibee :</a>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              data-bs-toggle="dropdown"
+            >
+              SkillvibeePro <span><img src="down-arrows.png" /></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Page 1</a></li>
+              <li><a class="dropdown-item" href="#">Page 2</a></li>
+              <li><a class="dropdown-item" href="#">Page 3</a></li>
+              <li><a class="dropdown-item" href="#">Page 4</a></li>
+            </ul>
+          </li>
 
-    
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sign In</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn upper-button">
+              <img src="computer.png" /> Join Now
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-</body>
+    <!-- Main Section -->
+    <div class="container-fluid p1">
+      <div class="row align-items-center">
+        <!-- Text Content -->
+        <div class="col-5">
+          <div class="first-paragraph">
+            The Ultimate
+            <span class="span-p1 fw-bold">Student’s</span> Freelancing Hub
+          </div>
+          <p class="second-paragraph fs-5">
+            Trusted by beginners, marketers & professionals;<br />
+            Built with usability and performance in mind.
+          </p>
+          <button class="btn second-top-button">
+            <i class="bi bi-arrow-right"></i> Start Career With Us
+          </button>
+          <hr class="custom-horizontal-line" />
+          <div class="d-flex gap-5 mt-4 user-context">
+            <div>
+              <div class="fw-bold fs-5">1,000,000+</div>
+              <div class="small fs-5">People Trust Skillvibee</div>
+            </div>
+
+            <div>
+              <div class="fw-bold fs-5">26k+</div>
+              <div class="small fs-5">Average 5-Star Reviews</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="col-7">
+          <div class="image-container">
+            <img src="first-image.webp" alt="Main Image" />
+            <!-- Search Bar inside Image -->
+            <form onsubmit="performSearch(); return false;">
+              <div class="position-relative search-bar">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search for any service from skillvibee"
+                />
+
+                <button type="submit" class="btn me-3 search-icon">
+                  <i class="bi bi-search text-muted"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="process-to-find fs-2">
+        We Are Always <span id="process1">Ready to Help</span>You
+      </div>
+      <div class="process2 fs-2">& Your Career</div>
+    </div>
+    <img id="finger-gesture" src="finger_gesture.png" />
+    <div class="after-finger-gesture-p">
+      Let We find the best freelancers for you
+    </div>
+    <div class="process-icons">
+      <div class="circle">
+        <img class="setting-icon" src="settings icon.png" />
+      </div>
+
+      <div class="circle"><img class="check-icon" src="check.png" /></div>
+
+      <div class="circle"><img class="menu-icon" src="open-menu.png" /></div>
+      <div class="circle">
+        <img class="export-icon" src="export-icon.png" />
+      </div>
+      <div class="circle">
+        <img class="self-managment-icon" src="self-managment-icon.png" />
+      </div>
+    </div>
+
+    <div class="line-container">
+      <div class="line"></div>
+      <div class="left-dot"></div>
+      <div class="right-dot"></div>
+    </div>
+    <div class="second-line-container">
+      <div class="second-line"></div>
+      <div class="second-left-dot"></div>
+      <div class="second-right-dot"></div>
+    </div>
+    <div class="third-line-container">
+      <div class="third-line"></div>
+      <div class="third-left-dot"></div>
+      <div class="third-right-dot"></div>
+    </div>
+    <div class="fourth-line-container">
+      <div class="fourth-line"></div>
+      <div class="fourth-left-dot"></div>
+      <div class="fourth-right-dot"></div>
+    </div>
+    <div class="p-icons">
+      <div class="setting-icon-p">
+        <div class="setting-icon-p-h">Dedicated hiring experts</div>
+        <div class="setting-icon-p-f">
+          Count on an account manager to<br />
+          find you the right talent and see to<br />
+          <span class="setting-icon-p-f-span"> your project’s every need.</span>
+        </div>
+      </div>
+      <div class="check-icon-p">
+        <div class="check-icon-p-h">Satisfaction guarantee</div>
+        <div class="check-icon-p-f">
+          Order confidently, with guaranteed refunds <br />
+          for less-than-satisfactory deliveries.
+        </div>
+      </div>
+      <div class="menu-icon-p">
+        <div class="menu-icon-p-h">Advanced management</div>
+        <div class="menu-icon-p-f">
+          <span class="menu-icon-p-f-span"> Seamlessly integrate</span><br />
+          freelancers into your team and projects.
+        </div>
+      </div>
+      <div class="export-icon-p">
+        <div class="export-icon-p-h">Flexible payment</div>
+        <div class="export-icon-p-f">
+          Pay per project or opt for hourly <br />
+
+          <span class="export-icon-p-f-span"
+            >rates to facilitate longer term collaboration.</span
+          >
+        </div>
+      </div>
+      <div class="self-managment-icon-p">
+        <div class="self-managment-icon-p-h">hire freelancers effortlessly</div>
+        <div class="self-managment-icon-p-f">
+          Phoenix: the first AI Assistant that helps you <br />
+
+          <span class="self-managment-icon-p-f-span">
+            Find a simple overview of Freelancer Plus.</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="website-icon">
+      <div class="word">S</div>
+      <div class="line-on-word"></div>
+    </div>
+    <div class="end-picture">
+      <img src="end-picture.png" />
+      <div class="overlay-text">
+        We`re known as a high skilled marketplace, <br />
+
+        <span class="p-on-end-p"
+          >and we see an acute pain point within that area.</span
+        >
+      </div>
+    </div>
+    <div class="Hiring-Mode">Hiring Made Easy</div>
+    <div class="hiring-mode-all">
+      <div class="hiring-mode-both">
+        <div class="hiring-mode-arrow">
+          <div class="line-arrow"></div>
+          <div class="arrow1"></div>
+          <div class="arrow2"></div>
+        </div>
+        <div class="circle-1">1</div>
+      </div>
+      <div class="hiring-mode-both2">
+        <div class="hiring-mode-arrow">
+          <div class="line-arrow2"></div>
+          <div class="arrow1-2"></div>
+          <div class="arrow2-2"></div>
+        </div>
+        <div class="circle-2">2</div>
+      </div>
+
+      <div class="hiring-mode-both3">
+        <div class="hiring-mode-arrow">
+          <div class="line-arrow3"></div>
+          <div class="arrow1-3"></div>
+          <div class="arrow2-3"></div>
+        </div>
+        <div class="circle-3">3</div>
+      </div>
+      <div class="hiring-mode-arrow">
+        <div class="line-arrow4"></div>
+        <div class="arrow1-4"></div>
+        <div class="arrow2-4"></div>
+      </div>
+    </div>
+
+    <div class="hiring-p">
+      <div class="hiring-p-1">
+        <div class="hiring-p-1-h">Talk to One of Our Industry Experts</div>
+        <div class="hiring-p-1-f">
+          An expert on our team will work with <br />
+          <span class="hiring-p-1-f-span1"
+            >you to understand your goals, technical</span
+          >
+          <br />
+          <span class="hiring-p-1-f-span2">needs, and team dynamics</span>
+        </div>
+      </div>
+
+      <div class="hiring-p-2">
+        <div class="hiring-p-2-h">Work With Hand-Selected Talent</div>
+        <div class="hiring-p-2-f">
+          <span class="hiring-p-2-f-span1-2"
+            >Within days, well introduce you</span
+          >
+          <br />
+
+          to the right talent for your project.
+
+          <br />
+          <span class="hiring-p-2-f-span2-2">
+            Average time to match is under 24 hours.</span
+          >
+        </div>
+      </div>
+      <div class="hiring-p-3">
+        <div class="hiring-p-3-h">The Right Fit, Guaranteed</div>
+        <div class="hiring-p-3-f">
+          <span class="hiring-p-3-f-span1-3"
+            >Work with your new team member</span
+          >
+          <br />
+          <span class="hiring-p-3-f-span2-3">
+            on a trial basis (pay only if satisfied),</span
+          >
+
+          <br />
+          <span class="hiring-p-3-f-span3-3">
+            ensuring you hire the right people for the job</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid shadow-top">
+      <div class="row">
+        <div class="last-heading">
+          <span class="last-heading-span1">How Skillvibee</span> Works !
+        </div>
+        <div class="last-sub-heading">
+          Join our student exclusive freelancing platform in just a few simple
+          steps
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="container container-1">
+            <div class="circle-1-group">
+              <div class="circle-last1">
+                <div class="circle-last2">
+                  <div class="line1-on-last-circle"></div>
+                  <div class="line2-on-last-circle"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-1-p">
+              <div class="container-1-h">Verify Your Student Status</div>
+              <div class="container-1-sub-h">
+                Upload your 10th and 12th marksheets to <br />
+                verify your student status and start your<br />
+                <span class="container-1-sub-h-span">freelancing journey.</span>
+              </div>
+            </div>
+            <div class="container sub-container-1">
+              <div class="box-1-p">
+                <span class="box-1-p1">Benefit:</span> Freelance for up to 10
+                years <br />
+                from 10th passing or 8 years from <br />
+                <span class="box-1-p2">12th passing.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container container-2">
+            <div class="circle-2-group">
+              <div class="circle-last2-1">
+                <div class="circle-last2-2">
+                  <div class="line1-on-last2-circle"></div>
+                  <div class="line2-on-last2-circle"></div>
+                </div>
+              </div>
+            </div>
+            <div class="container-2-p">
+              <div class="container-2-h">Create Your First Gig</div>
+              <div class="container-2-sub-h">
+                Set up your Fiverr-style gig with<br />
+                <span class="container-2-sub-h-span1"
+                  >detailed descriptions, pricing tiers,</span
+                ><br />
+                <span class="container-2-sub-h-span2"> and work samples.</span>
+              </div>
+            </div>
+            <div class="container sub-container-2">
+              <div class="box-2-p">
+                <span class="box-2-p1">Tip:</span> Add portfolio samples and
+                clear service descriptions to attract more clients.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="container container-3">
+            <div class="money-icon">
+              <div class="circle-money">
+                <img src="money.png" />
+              </div>
+            </div>
+            <div class="container-3-p">
+              <div class="container-3-h">Grow & Earn</div>
+              <div class="container-3-sub-h">
+                Complete gigs, earn money, and unlock
+
+                <br />
+
+                <span class="container-3-sub-h-span1"
+                  >additional platform benefits as you</span
+                >
+                <br />
+
+                <span class="container-3-sub-h-span2">progress.</span>
+              </div>
+            </div>
+            <div class="container sub-container-3">
+              <div class="box-3-p">
+                <span class="box-3-p1">Milestones:</span> 100+ gigs for job
+                access,<br />
+                <span class="box-3-p2"> 150+ for scholarships!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
-
